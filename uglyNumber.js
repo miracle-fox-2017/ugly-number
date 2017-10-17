@@ -1,32 +1,47 @@
 'use strict'
 
-function maxDivides(number, divisible) {
-  while(number % divisible == 0) {
-    number = number / divisible;
+function maxDivide(number, divisible)
+{
+  while(number % divisible == 0) //2 % 2 = 0
+  {
+    number = number / divisible; // 2 / 2 = 1
   }
-  return numbers;
+  return number;
 }
 
-function isUgly(numberUgly) {
+function isUgly(numberUgly)
+{
   numberUgly = maxDivide(numberUgly, 2);
+  // console.log("2 " + numberUgly);
   numberUgly = maxDivide(numberUgly, 3);
+  // console.log("3 " + numberUgly);
   numberUgly = maxDivide(numberUgly, 5);
+  // console.log("5 " + numberUgly);
 
-  return (numbers = 1) ? true : false;
+  return (numberUgly === 1) ? true : false;
 }
 
-function getUglyNo(input) {
-  let i = 1;
-  let countUglyNumber == 1; // ugly number count
+function getUglyNo(input)
+{
+  let i = 0;
+  let countUglyNumber = 1; // ugly number count
 
-  while(input > countUglyNumber) {
+  while(input >= countUglyNumber)
+  {
     i++;
-    if(isUgly(i) == 1) {
-      counts++;
+    // console.log("i = " + i);
+    // console.log("isUgly i = " + isUgly(i));
+    if(isUgly(i) === true)
+    {
+      countUglyNumber++;
     }
-    return i;
   }
+  return i;
 }
+
+
+// console.log(isUgly(12));
+
 
 //driver code
 console.log(getUglyNo(150)); //5832
